@@ -5,7 +5,10 @@
 <div class="flex">
 	<Sidebar>
 		<main class="flex-1 p-4">
-			<h1>Tasks</h1>
+			<div class="mb-4">
+				<h1 class="text-2xl font-bold tracking-tight">Tasks</h1>
+				<p class="text-muted-foreground">Manage your tasks with Tarai.</p>
+			</div>
 		</main>
 	</Sidebar>
 </div>
