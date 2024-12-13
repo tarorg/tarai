@@ -15,7 +15,7 @@
 		user: {
 			name: "shadcn",
 			email: "m@example.com",
-			avatar: "public/assets/03.png",
+			avatar: "public/assets/023.png",
 		},
 		workspaces: [
 			{
@@ -155,7 +155,7 @@
 	<Sidebar.Header class="flex-shrink-0 w-full">
 		<div class="flex items-center justify-between w-full px-4 py-3">
 			<div class="flex-1">
-				<WorkspaceSwitcher workspaces={data.workspaces} />
+				<WorkspaceSwitcher workspaces={data.workspaces} class="pl-0" />
 			</div>
 			<Sidebar.Trigger class="md:hidden" />
 		</div>

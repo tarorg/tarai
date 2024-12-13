@@ -6,7 +6,6 @@
 	<Sidebar>
 		<main class="flex-1 p-4">
 			<h1>Tarai</h1>
-			<p>This is the content for the Tarai page (Circle icon).</p>
 		</main>
 	</Sidebar>
 </div>

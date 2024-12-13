@@ -6,7 +6,6 @@
 	<Sidebar>
 		<main class="flex-1 p-4">
 			<h1>Spaces</h1>
-			<p>This is the content for the Spaces page (Square icon).</p>
 		</main>
 	</Sidebar>
 </div>
