@@ -5,6 +5,9 @@
 	import type { HTMLAttributes } from "svelte/elements";
 	import { SIDEBAR_WIDTH_MOBILE } from "./constants.js";
 	import { useSidebar } from "./context.svelte.js";
+	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+	import { Button } from "$lib/components/ui/button/index.js";
+	import PanelLeft from "lucide-svelte/icons/panel-left";
 
 	let {
 		ref = $bindable(null),
@@ -50,6 +53,20 @@
 		>
 			<div class="flex h-full w-full flex-col">
 				{@render children?.()}
+				<Button
+					type="button"
+					onclick={(e) => {
+						e.preventDefault();
+						sidebar.toggle();
+					}}
+					data-sidebar="trigger"
+					variant="ghost"
+					size="icon"
+					class={cn("h-7 w-7")}
+				>
+					<PanelLeft />
+					<span class="sr-only">Toggle Sidebar</span>
+				</Button>
 			</div>
 		</Sheet.Content>
 	</Sheet.Root>
@@ -92,6 +109,7 @@
 				class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
 			>
 				{@render children?.()}
+				<Sidebar.Trigger />
 			</div>
 		</div>
 	</div>
