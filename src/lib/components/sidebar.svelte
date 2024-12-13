@@ -1,14 +1,22 @@
 <script lang="ts">
     import AppSidebar from "$lib/components/app-sidebar.svelte";
     import * as Sidebar from "$lib/components/ui/sidebar/index.js";
+    import { Circle, Square, Triangle } from "lucide-svelte";
 </script>
 
 <Sidebar.Provider>
     <AppSidebar />
     <Sidebar.Inset>
         <header class="flex h-16 shrink-0 items-center gap-2">
-            <div class="flex items-center gap-2 px-4">
-                <Sidebar.Trigger />
+            <div class="flex items-center gap-2 px-4 w-full">
+                <div class="flex-1 flex items-center gap-2">
+                    <Sidebar.Trigger />
+                </div>
+                <div class="icon-group flex items-center gap-2">
+                    <Circle class="h-4 w-4" />
+                    <Triangle class="h-4 w-4" />
+                    <Square class="h-4 w-4" />
+                </div>
             </div>
         </header>
         <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
