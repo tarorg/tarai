@@ -17,21 +17,16 @@
 			email: "m@example.com",
 			avatar: "public/assets/03.png",
 		},
-		teams: [
+		workspaces: [
 			{
-				name: "Acme Inc",
+				name: "Sales",
 				logo: GalleryVerticalEnd,
 				plan: "Enterprise",
 			},
 			{
-				name: "Acme Corp.",
+				name: "Marketing",
 				logo: AudioWaveform,
 				plan: "Startup",
-			},
-			{
-				name: "Evil Corp.",
-				logo: Command,
-				plan: "Free",
 			},
 		],
 		navMain: [
@@ -158,7 +153,7 @@
 
 <Sidebar.Root bind:ref {collapsible} {...restProps}>
 	<Sidebar.Header>
-		<TeamSwitcher teams={data.teams} />
+		<TeamSwitcher workspaces={data.workspaces} />
 	</Sidebar.Header>
 	<Sidebar.Content>
 		<NavMain items={data.navMain} />
