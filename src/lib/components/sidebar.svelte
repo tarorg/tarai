@@ -13,9 +13,15 @@
                     <Sidebar.Trigger />
                 </div>
                 <div class="icon-group flex items-center gap-2">
-                    <Circle class="h-4 w-4" />
-                    <Triangle class="h-4 w-4" />
-                    <Square class="h-4 w-4" />
+                    <a href="/tarai">
+                        <Circle class="h-4 w-4" />
+                    </a>
+                    <a href="/tasks">
+                        <Triangle class="h-4 w-4" />
+                    </a>
+                    <a href="/spaces">
+                        <Square class="h-4 w-4" />
+                    </a>
                 </div>
             </div>
         </header>
