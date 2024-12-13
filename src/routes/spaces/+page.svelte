@@ -2,7 +2,6 @@
 	import Sidebar from "$lib/components/sidebar.svelte";
 	import Avatar from "$lib/components/Avatar.svelte";
 
-	// Sample chat data (replace with your actual data)
 	const chats = [
 		{
 			id: 1,
@@ -33,7 +32,7 @@
 		<main class="flex-1 p-4">
 			<div class="mb-4">
 				<h1 class="text-2xl font-bold tracking-tight">Spaces</h1>
-				<p class="text-muted-foreground">Your chat history</p>
+				<p class="text-muted-foreground">chats. communities</p>
 			</div>
 			<div class="space-y-2">
 				{#each chats as chat (chat.id)}
