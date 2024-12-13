@@ -47,26 +47,12 @@
 		<Sheet.Content
 			data-sidebar="sidebar"
 			data-mobile="true"
-			class="bg-sidebar text-sidebar-foreground w-[--sidebar-width] p-0 [&>button]:hidden"
-			style="--sidebar-width: {SIDEBAR_WIDTH_MOBILE};"
+			class="bg-sidebar text-sidebar-foreground w-full p-0 [&>button]:hidden"
 			{side}
 		>
 			<div class="flex h-full w-full flex-col">
 				{@render children?.()}
-				<Button
-					type="button"
-					onclick={(e) => {
-						e.preventDefault();
-						sidebar.toggle();
-					}}
-					data-sidebar="trigger"
-					variant="ghost"
-					size="icon"
-					class={cn("h-7 w-7")}
-				>
-					<PanelLeft />
-					<span class="sr-only">Toggle Sidebar</span>
-				</Button>
+				<Sidebar.Trigger />
 			</div>
 		</Sheet.Content>
 	</Sheet.Root>
@@ -109,7 +95,6 @@
 				class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
 			>
 				{@render children?.()}
-				<Sidebar.Trigger />
 			</div>
 		</div>
 	</div>
