@@ -52,7 +52,6 @@
 		>
 			<div class="flex h-full w-full flex-col">
 				{@render children?.()}
-				<Sidebar.Trigger />
 			</div>
 		</Sheet.Content>
 	</Sheet.Root>
