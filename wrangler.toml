@@ -1,9 +1,0 @@
-# This file is for Cloudflare Workers configuration
-name = "your-project-name"
-type = "javascript"
-
-# ... other configurations ...
-
-[[routings]]
-pattern = "your-domain.com/*"
-zone_id = "your-zone-id" 

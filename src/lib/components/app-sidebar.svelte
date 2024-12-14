@@ -26,39 +26,39 @@
 					{
 						title: "POS",
 						items: [
-							{ title: "New Sale", url: "#" },
-							{ title: "Sales History", url: "#" },
-							{ title: "Returns", url: "#" }
+							{ title: "New Sale", url: "/pos/new-sale" },
+							{ title: "Sales History", url: "/pos/sales-history" },
+							{ title: "Returns", url: "/pos/returns" }
 						]
 					},
 					{
 						title: "Commerce",
 						items: [
-							{ title: "Products", url: "#" },
-							{ title: "Orders", url: "#" },
-							{ title: "Customers", url: "#" }
+							{ title: "Products", url: "/commerce/products" },
+							{ title: "Orders", url: "/commerce/orders" },
+							{ title: "Customers", url: "/commerce/customers" }
 						]
 					},
 					{
 						title: "Inventory",
 						items: [
-							{ title: "Stock Overview", url: "#" },
-							{ title: "Stock Adjustments", url: "#" },
-							{ title: "Purchase Orders", url: "#" }
+							{ title: "Stock Overview", url: "/inventory/stock-overview" },
+							{ title: "Stock Adjustments", url: "/inventory/stock-adjustments" },
+							{ title: "Purchase Orders", url: "/inventory/purchase-orders" }
 						]
 					},
 					{
 						title: "Reports",
 						items: [
-							{ title: "Sales Reports", url: "#" },
-							{ title: "Inventory Reports", url: "#" }
+							{ title: "Sales Reports", url: "/reports/sales" },
+							{ title: "Inventory Reports", url: "/reports/inventory" }
 						]
 					},
 					{
 						title: "Settings",
 						items: [
-							{ title: "Inventory Settings", url: "#" },
-							{ title: "User Management", url: "#" }
+							{ title: "Inventory Settings", url: "/settings/inventory" },
+							{ title: "User Management", url: "/settings/user-management" }
 						]
 					}
 				]
