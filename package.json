@@ -43,5 +43,8 @@
 		"@steeze-ui/svelte-icon": "^1.6.2",
 		"@tailwindcss/typography": "^0.5.15",
 		"svelte-avatar": "^1.2.0"
+	},
+	"build": {
+		"output": "dist"
 	}
 }
