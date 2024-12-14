@@ -1,0 +1,56 @@
+put this menu , the menu changes with Workspace switch 
+
+Sales Workspace : 
+
+POS -
+New Sale
+Sales History
+Returns
+
+Commerce -
+Products
+Orders
+Customers
+
+Inventory -
+Stock Overview
+Stock Adjustments
+Purchase Orders
+
+Reports -
+Sales Reports
+Inventory Reports
+Settings
+
+
+Settings -
+Inventory Settings
+User Management
+
+
+Marketing Workspace : 
+
+Campaigns -
+New Campaign
+Campaign History
+Drafts
+Leads
+
+Lead Management -
+Lead Sources
+Lead Analytics
+Content
+
+Content Library -
+Templates
+Media Management
+Reports
+
+Campaign Performance -
+Lead Reports
+ROI Analysis
+Settings
+
+Campaign Settings -
+Lead Settings
+User Management

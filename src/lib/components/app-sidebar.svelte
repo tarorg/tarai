@@ -19,15 +19,96 @@
 		},
 		workspaces: [
 			{
-				name: "Sales",
+				name: "Pin",
 				logo: GalleryVerticalEnd,
-				plan: "Enterprise",
+				plan: "Commerce",
+				navMain: [
+					{
+						title: "POS",
+						items: [
+							{ title: "New Sale", url: "#" },
+							{ title: "Sales History", url: "#" },
+							{ title: "Returns", url: "#" }
+						]
+					},
+					{
+						title: "Commerce",
+						items: [
+							{ title: "Products", url: "#" },
+							{ title: "Orders", url: "#" },
+							{ title: "Customers", url: "#" }
+						]
+					},
+					{
+						title: "Inventory",
+						items: [
+							{ title: "Stock Overview", url: "#" },
+							{ title: "Stock Adjustments", url: "#" },
+							{ title: "Purchase Orders", url: "#" }
+						]
+					},
+					{
+						title: "Reports",
+						items: [
+							{ title: "Sales Reports", url: "#" },
+							{ title: "Inventory Reports", url: "#" }
+						]
+					},
+					{
+						title: "Settings",
+						items: [
+							{ title: "Inventory Settings", url: "#" },
+							{ title: "User Management", url: "#" }
+						]
+					}
+				]
 			},
 			{
-				name: "Marketing",
+				name: "Branding",
 				logo: AudioWaveform,
-				plan: "Startup",
-			},
+				plan: "CRM, Campaigns",
+				navMain: [
+					{
+						title: "Campaigns",
+						items: [
+							{ title: "New Campaign", url: "#" },
+							{ title: "Campaign History", url: "#" },
+							{ title: "Drafts", url: "#" }
+						]
+					},
+					{
+						title: "Lead Management",
+						items: [
+							{ title: "Lead Sources", url: "#" },
+							{ title: "Lead Analytics", url: "#" }
+						]
+					},
+					{
+						title: "Content",
+						items: [
+							{ title: "Content Library", url: "#" },
+							{ title: "Templates", url: "#" },
+							{ title: "Media Management", url: "#" }
+						]
+					},
+					{
+						title: "Reports",
+						items: [
+							{ title: "Campaign Performance", url: "#" },
+							{ title: "Lead Reports", url: "#" },
+							{ title: "ROI Analysis", url: "#" }
+						]
+					},
+					{
+						title: "Settings",
+						items: [
+							{ title: "Campaign Settings", url: "#" },
+							{ title: "Lead Settings", url: "#" },
+							{ title: "User Management", url: "#" }
+						]
+					}
+				]
+			}
 		],
 		navMain: [
 			{
@@ -149,20 +230,31 @@
 		collapsible = "icon",
 		...restProps
 	}: ComponentProps<typeof Sidebar.Root> = $props();
+
+	let selectedWorkspace = $state(data.workspaces[0]);
+
+	function handleWorkspaceSelect(workspace: typeof data.workspaces[0]) {
+		selectedWorkspace = workspace;
+	}
 </script>
 
 <Sidebar.Root bind:ref {collapsible} {...restProps}>
 	<Sidebar.Header class="flex-shrink-0 w-full">
 		<div class="flex items-center justify-between w-full px-4 py-3">
 			<div class="flex-1">
-				<WorkspaceSwitcher workspaces={data.workspaces} class="pl-0" />
+				<WorkspaceSwitcher
+					workspaces={data.workspaces}
+					{selectedWorkspace}
+					{handleWorkspaceSelect}
+					class="pl-0"
+				/>
 			</div>
 			<Sidebar.Trigger class="md:hidden" />
 		</div>
 	</Sidebar.Header>
 	<Sidebar.Content>
-		<NavMain items={data.navMain} />
-		<NavProjects projects={data.projects} />
+		<NavMain items={selectedWorkspace.navMain} />
+		<NavProjects />
 	</Sidebar.Content>
 	<Sidebar.Footer>
 		<NavUser user={data.user} />

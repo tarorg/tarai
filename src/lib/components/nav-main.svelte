@@ -8,7 +8,7 @@
 	}: {
 		items: {
 			title: string;
-			url: string;
+			url?: string;
 			// this should be `Component` after lucide-svelte updates types
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			icon?: any;
@@ -25,7 +25,7 @@
 	<Sidebar.GroupLabel>Platform</Sidebar.GroupLabel>
 	<Sidebar.Menu>
 		{#each items as mainItem (mainItem.title)}
-			<Collapsible.Root open={mainItem.isActive} class="group/collapsible">
+			<Collapsible.Root class="group/collapsible">
 				{#snippet child({ props })}
 					<Sidebar.MenuItem {...props}>
 						<Collapsible.Trigger>
@@ -38,14 +38,16 @@
 										<mainItem.icon />
 									{/if}
 									<span>{mainItem.title}</span>
-									<ChevronRight
-										class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
-									/>
+									{#if mainItem.items}
+										<ChevronRight
+											class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90"
+										/>
+									{/if}
 								</Sidebar.MenuButton>
 							{/snippet}
 						</Collapsible.Trigger>
-						<Collapsible.Content>
-							{#if mainItem.items}
+						{#if mainItem.items}
+							<Collapsible.Content>
 								<Sidebar.MenuSub>
 									{#each mainItem.items as subItem (subItem.title)}
 										<Sidebar.MenuSubItem>
@@ -59,8 +61,8 @@
 										</Sidebar.MenuSubItem>
 									{/each}
 								</Sidebar.MenuSub>
-							{/if}
-						</Collapsible.Content>
+							</Collapsible.Content>
+						{/if}
 					</Sidebar.MenuItem>
 				{/snippet}
 			</Collapsible.Root>

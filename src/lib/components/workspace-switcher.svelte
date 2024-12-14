@@ -7,14 +7,16 @@
 
 	// This should be `Component` after lucide-svelte updates types
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	let { workspaces }: { workspaces: { name: string; logo: any; plan: string }[] } = $props();
+	let {
+		workspaces,
+		selectedWorkspace,
+		handleWorkspaceSelect
+	}: {
+		workspaces: { name: string; logo: any; plan: string; navMain: any }[];
+		selectedWorkspace: { name: string; logo: any; plan: string; navMain: any };
+		handleWorkspaceSelect: (workspace: any) => void;
+	} = $props();
 	const sidebar = useSidebar();
-
-	let selectedWorkspace = $state(workspaces[0]);
-
-	function handleWorkspaceSelect(workspace: typeof workspaces[0]) {
-		selectedWorkspace = workspace;
-	}
 </script>
 
 <Sidebar.Menu>
