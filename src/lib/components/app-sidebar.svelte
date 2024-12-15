@@ -267,7 +267,7 @@
 
 <Sidebar.Root bind:ref {collapsible} {...restProps}>
 	<Sidebar.Header class="flex-shrink-0 w-full">
-		<div class="flex items-center justify-between w-full px-4 py-3">
+		<div class="flex items-center justify-between w-full px-2 py-3">
 			<div class="flex-1">
 				<WorkspaceSwitcher
 					workspaces={data.workspaces}

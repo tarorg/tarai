@@ -25,7 +25,7 @@
                 </div>
             </div>
         </header>
-        <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
+        <div class="flex flex-1 flex-col gap-0 p-0 pt-0">
             <slot />
         </div>
     </Sidebar.Inset>

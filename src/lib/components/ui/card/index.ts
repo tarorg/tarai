@@ -13,10 +13,11 @@ export {
 	Header,
 	Title,
 	//
-	Root as Card,
 	Content as CardContent,
 	Description as CardDescription,
 	Footer as CardFooter,
 	Header as CardHeader,
 	Title as CardTitle,
 };
+
+export { default as Card } from "./card.svelte";
