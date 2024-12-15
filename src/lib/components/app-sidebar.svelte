@@ -9,6 +9,24 @@
 	import Map from "lucide-svelte/icons/map";
 	import Settings2 from "lucide-svelte/icons/settings-2";
 	import SquareTerminal from "lucide-svelte/icons/square-terminal";
+	import {
+		Home,
+		CreditCard,
+		User,
+		Users,
+		Settings,
+		LogOut,
+		ShoppingBag,
+		PackagePlus,
+		PackageCheck,
+		PackageX,
+		Truck,
+		BarChart,
+		PieChart,
+		FileText,
+		Mail,
+		Calendar
+	} from 'lucide-svelte';
 
 	// This is sample data.
 	const data = {
@@ -25,22 +43,24 @@
 				navMain: [
 					{
 						title: "POS",
+						icon: Command,
 						items: [
 							{ title: "New Sale", url: "/pos/new-sale" },
-							{ title: "Sales History", url: "/pos/sales-history" },
+							{ title: "Orders", url: "/pos/orders" },
 							{ title: "Returns", url: "/pos/returns" }
 						]
 					},
 					{
 						title: "Commerce",
+						icon: SquareTerminal,
 						items: [
 							{ title: "Products", url: "/commerce/products" },
-							{ title: "Orders", url: "/commerce/orders" },
 							{ title: "Customers", url: "/commerce/customers" }
 						]
 					},
 					{
 						title: "Inventory",
+						icon: BookOpen,
 						items: [
 							{ title: "Stock Overview", url: "/inventory/stock-overview" },
 							{ title: "Stock Adjustments", url: "/inventory/stock-adjustments" },
@@ -49,6 +69,7 @@
 					},
 					{
 						title: "Reports",
+						icon: ChartPie,
 						items: [
 							{ title: "Sales Reports", url: "/reports/sales" },
 							{ title: "Inventory Reports", url: "/reports/inventory" }
@@ -56,6 +77,7 @@
 					},
 					{
 						title: "Settings",
+						icon: Settings2,
 						items: [
 							{ title: "Inventory Settings", url: "/settings/inventory" },
 							{ title: "User Management", url: "/settings/user-management" }
@@ -70,6 +92,7 @@
 				navMain: [
 					{
 						title: "Campaigns",
+						icon: Mail,
 						items: [
 							{ title: "New Campaign", url: "#" },
 							{ title: "Campaign History", url: "#" },
@@ -78,6 +101,7 @@
 					},
 					{
 						title: "Lead Management",
+						icon: Users,
 						items: [
 							{ title: "Lead Sources", url: "#" },
 							{ title: "Lead Analytics", url: "#" }
@@ -85,6 +109,7 @@
 					},
 					{
 						title: "Content",
+						icon: FileText,
 						items: [
 							{ title: "Content Library", url: "#" },
 							{ title: "Templates", url: "#" },
@@ -93,6 +118,7 @@
 					},
 					{
 						title: "Reports",
+						icon: ChartPie,
 						items: [
 							{ title: "Campaign Performance", url: "#" },
 							{ title: "Lead Reports", url: "#" },
@@ -101,6 +127,7 @@
 					},
 					{
 						title: "Settings",
+						icon: Settings2,
 						items: [
 							{ title: "Campaign Settings", url: "#" },
 							{ title: "Lead Settings", url: "#" },
