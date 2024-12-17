@@ -178,7 +178,7 @@
 										<Tabs.Trigger value="options">Options</Tabs.Trigger>
 										<Tabs.Trigger value="properties">Properties</Tabs.Trigger>
 										<Tabs.Trigger value="branding">Branding</Tabs.Trigger>
-										<Tabs.Trigger value="instance">Instance</Tabs.Trigger>
+										<Tabs.Trigger value="variant detail">Variant detail</Tabs.Trigger>
 										<Tabs.Trigger value="inventory">Inventory</Tabs.Trigger>
 									</Tabs.List>
 									<div class="ml-auto flex items-center gap-2">
@@ -333,7 +333,7 @@
 											</Table.Body>
 										</Table.Root>
 									</Tabs.Content>
-									<Tabs.Content value="instance">
+									<Tabs.Content value="variant detail">
 										<Table.Root class="w-full border-none">
 											<Table.Header>
 												<Table.Row class="hidden">
