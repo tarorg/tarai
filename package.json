@@ -42,7 +42,8 @@
 		"@steeze-ui/heroicons": "^2.4.2",
 		"@steeze-ui/svelte-icon": "^1.6.2",
 		"@tailwindcss/typography": "^0.5.15",
-		"svelte-avatar": "^1.2.0"
+		"svelte-avatar": "^1.2.0",
+		"svelte-instantdb": "^0.4.1"
 	},
 	"build": {
 		"output": "dist"
